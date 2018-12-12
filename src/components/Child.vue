@@ -1,7 +1,9 @@
 <template>
   <div class="child">
-    <p>{{ testData }}</p>
-    <button v-on:click='changeTestData'>change test</button>
+    <p>msg is: {{ msg }}</p>
+    <p>testData is: {{ testData }}</p>
+    <button v-on:click='changeTestData'>change test data</button>
+    <button v-on:click='changeMsg'>change msg</button>
   </div>
 </template>
 
@@ -9,7 +11,9 @@
 export default {
   name: 'Child',
   props: {
+    msg: String,
     testData: String,
+    changeMsg: Function,
     changeTestData: Function
   }
 }

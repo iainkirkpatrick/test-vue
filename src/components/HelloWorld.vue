@@ -1,6 +1,11 @@
 <template>
   <div class="hello">
-    <Child :testData='testData' :changeTestData='changeTestData' />
+    <Child
+      :msg='msg'
+      :testData='testData'
+      :changeMsg='changeMsg'
+      :changeTestData='changeTestData'
+    />
   </div>
 </template>
 
@@ -22,7 +27,10 @@ export default {
   },
   methods: {
     changeTestData: function () {
-      this.testData = 'another test'
+      this.testData = 'new testData'
+    },
+    changeMsg: function () {
+      this.msg = 'a new message'
     }
   }
 }
